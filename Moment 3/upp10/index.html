@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+    </main>
+    <script>
+        const apiKey = "DEzNkVENzEyMkI2MjIiLCJ0eXAiOiJhdCt";
+
+        async function deleteCustomer(id) {
+            const response = await fetch('https://data.egyweb.se/api/company/deleteCustomer.php', {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Key ${apiKey}`
+                },
+                body: JSON.stringify({ id: id })
+            });
+
+            const data = await response.json();
+            console.log(data);
+            console.log("Successfull");
+        }
+
+        async function createCustomerWithJson() {
+            const newCustomer = {
+                name: "Exempel Företag AB",
+                phone: "070-1122334",
+                street: "Exempelgatan 1",
+                zipcode: "123 45",
+                city: "Exempelstad"
+            };
+
+            const response = await fetch('https://data.egyweb.se/api/company/createCustomer.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Key ${apiKey}`
+                },
+                body: JSON.stringify(newCustomer)
+            });
+
+            const data = await response.json();
+            console.log(data);
+            console.log("Succesfull");
+        }
+
+        async function getAllCustomers() {
+            const response = await fetch('https://data.egyweb.se/api/company/readCustomer.php');
+            const data = await response.json();
+            console.log(data);
+        }
+
+        async function updateCustomer() {
+            const customerUpdate = {
+                id: 4,
+                phone: "1",
+                address: {
+                    street: "12",
+                    city: "Stockholm"
+                }
+            };
+
+            const response = await fetch('https://data.egyweb.se/api/company/updateCustomer.php', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Key ${apiKey}`
+                },
+                body: JSON.stringify(customerUpdate)
+            });
+
+            const data = await response.json();
+            console.log(data);
+            console.log("Successfull")
+        }
+
+        //updateCustomer();
+        //deleteCustomer(1);
+        //createCustomerWithJson();
+        getAllCustomers();
+    </script>
+</body>
+
+</html>

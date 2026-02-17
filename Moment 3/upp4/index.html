@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <strong>New password</strong><br>
+        <input type="text" id="pwd" size="20"><br>
+        <input type="text" id="pwd1" size="20"><br>
+        <button type="button" id="cont">Submit</button>
+    </form>
+    <div id="result"></div>
+
+    <script type="text/javascript">
+        
+        function init() {
+            let element = document.getElementById("cont");
+            element.addEventListener("click", controll);
+        }
+
+        function controll() {
+
+            let pwd1 = document.getElementById("pwd");
+            let pwd2 = document.getElementById("pwd1");
+
+            if (pwd1.value === pwd2.value) {
+                let element = document.getElementById("result");
+                element.innerHTML = "Password changed.";
+            } else {
+                let element = document.getElementById("result");
+                element.innerHTML = "Wrong, try again.";
+            }
+        }
+        init();
+    </script>
+</body>
+
+</html>

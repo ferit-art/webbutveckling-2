@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Välkommern</h1>
+    <script>
+        let nameArray = ["Ferit", "Henrik", "Noel", "Olle", "Leon"];
+
+        for (let index = 0; index < nameArray.length; index++) {
+
+            let newChild = document.createElement("p");
+
+            const name = nameArray[index];
+            let content = document.createTextNode(name); // För att skapa text till LI
+            newChild.appendChild(content); // Lägger till texten ovan.
+            document.body.appendChild(newChild);
+        }
+    </script>
+</body>
+
+</html>

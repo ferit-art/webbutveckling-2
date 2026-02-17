@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="sv">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Auth Check</title>
+    </head>
+
+    <body>
+        <form method="post" id="authform">
+            <label for="user">Användarnamn</label>
+            <input type="text" name="user">
+
+            <label for="pwd"></label>
+            <input type="password" name="pwd">
+
+            <input type="submit" value="Check">
+        </form>
+    </body>
+    <script>
+        const form = document.getElementById('authform');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const user = document.getElementsByName('user')[0].value;
+            const pwd = document.getElementsByName('pwd')[0].value;
+
+            auth(user, pwd);
+        });
+
+        async function auth(user, pwd) {
+            const data = new FormData(form);
+            const url = "https://data.egyweb.se/api/auth.php";
+
+            const response = await fetch(url, {
+                method: "post",
+                body: data
+            });
+            const check = await response.json();
+
+            console.log(check.success);
+        }
+    </script>
+
+    </html>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <section>hallo</section>
+    </main>
+    <script>
+        function init() {
+            let parent = document.querySelector("main");
+
+            for (let index = 0; index < 3; index++) {
+
+                if (index < 2) {
+                    let element = document.createElement("section");
+                    element.innerHTML = "larum epsium";
+                    parent.appendChild(element);
+                } else {
+                    element = document.createElement("h2");
+                    element.innerHTML = "Vällkommen";
+                    parent.prepend(element);
+                }
+            }
+        }
+        init();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <input type="text" size="10" id="digit" value="10">
+        <input type="text" size="10" id="digit2" value="11">
+        <button type="button" id="calc">Summera</button>
+    </form>
+    <div id="result"></div>
+    <script type="text/javascript">
+        function init() {
+            let element = document.getElementById("calc");
+            element.addEventListener("click", calculate);
+        }
+
+        function calculate(e) {
+            let number1 = parseInt(document.getElementById('digit').value);
+            let number2 = parseInt(document.getElementById('digit2').value);
+            let total = number1 + number2;
+            document.getElementById("result").innerHTML = total;
+        }
+        init();
+    </script>
+</body>
+
+</html>

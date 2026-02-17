@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+</head>
+
+<body>
+    <main>
+        <input type="number" id="n1"> <input type="number" id="n2"> = <output id="result"></output>
+        <button id="sumBtn">Summera</button>
+        eller
+        <button id="multBtn">Multiplicera</button>
+    </main>
+</body>
+<script type="module">
+    import { sum } from "./summa.js";
+    import mult from "./multiply.js";
+
+    function init() {
+        document.getElementById("multBtn").addEventListener("click", () => controll("multBtn"));
+        document.getElementById("sumBtn").addEventListener("click", () => controll("sumBtn"));
+    }
+
+    async function controll(btn) {
+        let nr1 = Number(document.getElementById("n1").value);
+        let nr2 = Number(document.getElementById("n2").value);
+        let element = document.getElementById("result");
+
+        if (btn == "multBtn") {
+            element.value = await mult(nr1, nr2);
+        } else if (btn == "sumBtn") {
+            element.value = await sum(nr1, nr2);
+        }
+    }
+    init();
+</script>
+
+</html>

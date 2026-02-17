@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <section>hej</section>
+    </main>
+    <script>
+        function init() {
+            let parent = document.querySelector("main");
+
+            let child1 = document.createElement("nav");
+            let child2 = document.createElement("ul");
+
+            let child3 = [];
+
+            for (let _ of new Array(3).keys()) {
+                let element = document.createElement("li");
+                child2.appendChild(element);
+                child3.push(element);
+            }
+
+            for (let i of new Array(3).keys()) {
+                let element = document.createElement("a");
+                element.innerHTML = "a";
+                element.addEventListener("mouseenter", changeBg);
+                element.addEventListener("mouseleave", changeBackBg);
+                child3[i].appendChild(element);
+            }
+
+            child1.appendChild(child2);
+            parent.appendChild(child1);
+        }
+
+        function changeBg(e) {
+            e.target.style.background = "green";
+        }
+
+        function changeBackBg(e) {
+            e.target.style.background = "";
+        }
+        init();
+    </script>
+</body>
+
+</html>

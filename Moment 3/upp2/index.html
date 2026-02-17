@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>hallo</h1>
+    <article id='txt' style="border: 1px solid black;">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, delectus rem officia dolor recusandae
+            laborum dolorum praesentium nihil asperiores quae quas deleniti, incidunt aliquid. Sunt totam eaque nam
+            recusandae a.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero delectus amet blanditiis nobis doloribus
+            labore, maiores suscipit eaque accusantium est aut rerum cupiditate laudantium fugit dolorum quasi vero
+            eveniet minima?</p>
+    </article>
+
+    <script>
+        var bigTxt, smallTxt;
+        const nrOfChars = 200;
+
+        function init() {
+            var element = document.getElementById("txt");
+            bigTxt = element.innerHTML;
+            smallTxt = bigTxt.substr(0, nrOfChars);
+
+            document.getElementById('txt').innerHTML = smallTxt;
+
+            document.getElementById('txt').addEventListener("mouseenter", expand, false);
+            document.getElementById('txt').addEventListener("mouseleave", collapse, false);
+        }
+
+        function expand(e) {
+            document.getElementById('txt').innerHTML = bigTxt;
+        }
+
+        function collapse(e) {
+            document.getElementById('txt').innerHTML = smallTxt;
+        }
+
+        window.addEventListener("load", init, false);    
+    </script>
+</body>
+
+</html>

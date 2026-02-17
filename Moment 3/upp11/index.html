@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section></section>
+    <script type="module">
+        import { getCountries } from "./functions.js";
+
+        async function init() {
+            const countries = await getCountries();
+            let section = document.querySelector("section");
+            let content = new DocumentFragment();
+
+            for (const country of countries) {
+                const articleCountry = document.createElement("article");
+
+                const pName = document.createElement("p");
+                pName.textContent = "Namn: " + country.Name;
+                articleCountry.appendChild(pName);
+
+                const countryPopulation = document.createElement("p");
+                countryPopulation.textContent = "Population: " + country.Population;
+                articleCountry.appendChild(countryPopulation);
+
+                content.appendChild(articleCountry);
+            }
+            section.appendChild(content);
+        }
+        init();
+    </script>
+</body>
+
+</html>

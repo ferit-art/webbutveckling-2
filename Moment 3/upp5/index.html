@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>hej</p>
+    <p>hejdå</p>
+    <p>bye</p>
+    <p>hi</p>
+    <p>boom</p>
+    <p>pink</p>
+    <script>
+        function init() {
+
+            let elements = document.querySelectorAll("p");
+
+            for (let index = 0; index < elements.length; index++) {
+
+                const element = elements[index];
+                element.addEventListener("mouseenter", (e) => {
+                    e.target.style.background = "grey";
+                });
+                element.addEventListener("mouseleave", (e) => {
+                    e.target.style.background = "";
+                });
+            }
+        }
+        init();
+    </script>
+</body>
+
+</html>
