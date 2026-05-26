@@ -1,0 +1,95 @@
+/** Globala css-variabler */
+:root {
+    --margin-l: 4rem;
+    --margin-m: 1.5rem;
+    --margin-s: 1.2rem;
+}
+
+/** Reset */
+body,
+h1,
+h2,
+h3,
+p,
+section,
+article,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Overpass", Roboto, "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+    height: 100%;
+}
+
+main {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    max-width: 120rem;
+    padding: 1rem 3rem 3.5rem 3rem;
+    font-size: 1.6rem;
+
+    h1 {
+        margin: 3rem 0;
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        font-size: 2.6rem;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 0.2rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        padding-bottom: 0.7rem;
+    }
+
+    article {
+        margin: 2rem 2rem;
+        max-width: 80rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        font-size: 1.2rem;
+        padding: 1rem 1.5rem 3rem 1.5rem;
+
+        h1 {
+            margin: 1.5rem 0;
+            font-size: 2.2rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            padding-bottom: 0.1rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    main {
+        h1 {
+            margin: 1.5rem 0;
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            padding-bottom: 0.1rem;
+        }
+
+        article {
+            margin: 1.5rem 1rem;
+        }
+    }
+}

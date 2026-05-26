@@ -1,0 +1,39 @@
+
+> uppgift-1@0.0.1 dev
+> vite dev
+
+
+  VITE v8.0.11  ready in 273 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+11:41:35 PM [vite-plugin-svelte] src/lib/components/Header.svelte:19:8 Unused CSS selector "h1"
+https://svelte.dev/e/css_unused_selector
+11:41:35 PM [vite-plugin-svelte] src/lib/components/Header.svelte:24:8 Unused CSS selector "img"
+https://svelte.dev/e/css_unused_selector
+11:41:35 PM [vite-plugin-svelte] src/lib/components/Header.svelte:29:8 Unused CSS selector "span"
+https://svelte.dev/e/css_unused_selector
+11:41:35 PM [vite-plugin-svelte] src/lib/components/Header.svelte:30:12 Unused CSS selector "&.dark"
+https://svelte.dev/e/css_unused_selector
+11:41:35 PM [vite-plugin-svelte] src/lib/components/Header.svelte:34:12 Unused CSS selector "&.spacing"
+https://svelte.dev/e/css_unused_selector
+11:41:35 PM [vite-plugin-svelte] src/lib/components/Header.svelte:40:12 Unused CSS selector "header"
+https://svelte.dev/e/css_unused_selector
+11:41:35 PM [vite-plugin-svelte] src/lib/components/Header.svelte:43:16 Unused CSS selector "h1"
+https://svelte.dev/e/css_unused_selector
+11:41:35 PM [vite-plugin-svelte] src/lib/components/Header.svelte:47:16 Unused CSS selector "img"
+https://svelte.dev/e/css_unused_selector
+11:41:35 PM [vite-plugin-svelte] src/lib/components/Header.svelte:52:16 Unused CSS selector "span.spacing"
+https://svelte.dev/e/css_unused_selector
+11:41:35 PM [vite-plugin-svelte] src/lib/components/Header.svelte:59:12 Unused CSS selector "header"
+https://svelte.dev/e/css_unused_selector
+11:41:35 PM [vite-plugin-svelte] src/lib/components/Header.svelte:60:16 Unused CSS selector "h1"
+https://svelte.dev/e/css_unused_selector
+11:41:35 PM [vite-plugin-svelte] src/lib/components/Header.svelte:64:16 Unused CSS selector "img"
+https://svelte.dev/e/css_unused_selector
+11:41:35 PM [vite-plugin-svelte] src/lib/components/Header.svelte:68:16 Unused CSS selector "span.spacing"
+https://svelte.dev/e/css_unused_selector
+11:41:35 PM [vite-plugin-svelte] src/lib/components/Post.svelte:50:8 Unused CSS selector "p"
+https://svelte.dev/e/css_unused_selector
+11:41:35 PM [vite-plugin-svelte] src/lib/components/Nav.svelte:64:20 Unused CSS selector "&.active"
+https://svelte.dev/e/css_unused_selector
